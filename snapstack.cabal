@@ -1,0 +1,66 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: a7a29edf0ec836ce19ad3d3c4eb2e4ca4fc37228077358b298b18691d4850abc
+
+name:           snapstack
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/snapstack#readme>
+homepage:       https://github.com/fishyfrogface/snapstack#readme
+bug-reports:    https://github.com/fishyfrogface/snapstack/issues
+author:         Camilla Rygh
+copyright:      2018 Camilla Rygh
+license:        BSD3
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/fishyfrogface/snapstack
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_snapstack
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -fwarn-tabs -funbox-strict-fields -O2
+  build-depends:
+      base >=4.7 && <5
+    , happstack-server >=7.5.1.1 && <8
+    , snap-core >=1.0 && <1.1
+    , snap-server >=1.0 && <1.2
+  default-language: Haskell2010
+
+executable snapstack-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_snapstack
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -fwarn-tabs -funbox-strict-fields -O2 -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , snap-core >=1.0 && <1.1
+    , snap-server >=1.0 && <1.2
+    , snapstack
+  default-language: Haskell2010
+
+test-suite snapstack-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_snapstack
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -fwarn-tabs -funbox-strict-fields -O2 -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , snap-core >=1.0 && <1.1
+    , snap-server >=1.0 && <1.2
+    , snapstack
+  default-language: Haskell2010

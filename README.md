@@ -1,0 +1,25 @@
+A template project combining Snap with Stack for simpler dependency management
+
+### Prerequisites
+
+You need to have [Stack installed] (https://www.haskell.org/downloads).
+
+### Installing
+
+Build the project by running
+
+```
+stack build
+```
+
+To get the server running, type
+
+```
+stack ghci
+```
+
+Then call main from inside GHCi
+```
+*Main Lib> main
+```
+The server is now running at [http://localhost:8000]
