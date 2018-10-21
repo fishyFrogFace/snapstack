@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 25a5131f0823dd56a08d5210cef8f6e4da3a94c1e45b614c75d58c2781bdaaac
+-- hash: b14b8b2cfb3e2018f1b48a3a65501e5f19d67684b7fb4066612e0bf060b845f8
 
 name:           snapstack
 version:        0.1.0.0
@@ -58,7 +58,9 @@ test-suite snapstack-test
       test
   ghc-options: -Wall -fwarn-tabs -funbox-strict-fields -O2 -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      QuickCheck
+    , base >=4.7 && <5
+    , hspec
     , snap-core >=1.0 && <1.1
     , snap-server >=1.0 && <1.2
     , snapstack
