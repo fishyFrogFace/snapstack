@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a7a29edf0ec836ce19ad3d3c4eb2e4ca4fc37228077358b298b18691d4850abc
+-- hash: 25a5131f0823dd56a08d5210cef8f6e4da3a94c1e45b614c75d58c2781bdaaac
 
 name:           snapstack
 version:        0.1.0.0
@@ -31,7 +31,6 @@ library
   ghc-options: -Wall -fwarn-tabs -funbox-strict-fields -O2
   build-depends:
       base >=4.7 && <5
-    , happstack-server >=7.5.1.1 && <8
     , snap-core >=1.0 && <1.1
     , snap-server >=1.0 && <1.2
   default-language: Haskell2010

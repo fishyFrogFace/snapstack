@@ -23,8 +23,6 @@ ghc-options:
 
 library:
   source-dirs: src
-  dependencies:
-  - happstack-server >= 7.5.1.1 && < 8
 
 executables:
   snapstack-exe:
@@ -47,3 +45,4 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - snapstack
+
